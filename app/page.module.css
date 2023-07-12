@@ -1,0 +1,8 @@
+.card {
+	background-color: white;
+	border-radius: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 25.125rem;
+}
