@@ -18,12 +18,27 @@
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
-	/* background-color: #fafafb; */
-	background-color: gray;
+	background-color: #e7e7e9;
 	height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+footer {
+	position: fixed;
+	bottom: 1.5rem;
+	color: #a9a9a9;
+	font-family: var(--font-montserrat);
+	font-weight: 500;
+	line-height: normal;
+}
+
+footer a {
+	text-decoration: underline;
+	color: inherit;
+	font-weight: 700;
 }
 
 img,
