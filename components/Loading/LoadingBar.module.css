@@ -1,0 +1,44 @@
+.card {
+	max-width: 25rem;
+	border-radius: 0.5rem;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 2.25rem 2rem;
+	box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+	font-size: 1.125rem;
+	color: var(--gray-2);
+	font-weight: 500;
+}
+
+.bar {
+	width: 21.5rem;
+	border-radius: 0.5rem;
+	height: 0.35rem;
+	background-color: #f2f2f2;
+	margin: 2rem 0 0.75rem 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0.35rem;
+	width: 6rem;
+	background-color: var(--blue-1);
+	animation: loadingAnimation 2s linear infinite;
+}
+
+@keyframes loadingAnimation {
+	0% {
+		left: -6rem;
+	}
+	100% {
+		left: 21.5rem;
+	}
+}
