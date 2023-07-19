@@ -5,6 +5,7 @@ import { imageDb } from "@/utils/firebase-config";
 import { ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 import styles from "./Upload.module.css";
+import { useRouter } from "next/navigation";
 
 type Props = {
 	btnClass: string;
@@ -13,6 +14,7 @@ type Props = {
 export default function Upload(props: Props) {
 	const [imageLink, setImageLink] = useState<File | null>(null);
 	const fileInputRef = useRef<HTMLInputElement>(null);
+	const router = useRouter();
 
 	const handleClick = () => {
 		fileInputRef.current?.click();
@@ -24,6 +26,7 @@ export default function Upload(props: Props) {
 			setImageLink(file);
 			const imgRef = ref(imageDb, `files/${v4()}`);
 			uploadBytes(imgRef, file);
+			router.push("/result");
 		}
 	};
 
