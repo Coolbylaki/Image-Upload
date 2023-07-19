@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, useRef, useState } from "react";
+import { ChangeEvent, useRef } from "react";
 import { imageDb } from "@/utils/firebase-config";
 import { ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
