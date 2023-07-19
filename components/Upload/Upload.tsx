@@ -12,7 +12,6 @@ type Props = {
 };
 
 export default function Upload(props: Props) {
-	const [imageLink, setImageLink] = useState<File | null>(null);
 	const fileInputRef = useRef<HTMLInputElement>(null);
 	const router = useRouter();
 
@@ -23,7 +22,6 @@ export default function Upload(props: Props) {
 	const handleUpload = (event: ChangeEvent<HTMLInputElement>) => {
 		const file = event.target.files?.[0];
 		if (file) {
-			setImageLink(file);
 			const imgRef = ref(imageDb, `files/${v4()}`);
 			uploadBytes(imgRef, file);
 			router.push("/result");
