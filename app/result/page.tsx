@@ -1,14 +1,23 @@
 "use client";
 
 import { useImageContext } from "@/store/ImageContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { getDownloadURL } from "firebase/storage";
 
 export default function Result() {
+	const [imageUrl, setImageUrl] = useState("");
 	const { imageRef } = useImageContext();
 
 	useEffect(() => {
-		console.log(imageRef);
-	}, [imageRef]);
+		const getUrl = async () => {
+			if (imageRef) {
+				const imgUrl = await getDownloadURL(imageRef);
+				setImageUrl(imgUrl);
+			}
+		};
+
+		getUrl();
+	});
 
 	return (
 		<>
