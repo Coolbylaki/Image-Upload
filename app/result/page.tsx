@@ -24,6 +24,15 @@ export default function Result() {
 		getUrl();
 	});
 
+	const handleCopy = () => {
+		if (!navigator.clipboard) {
+			alert("Your browser does not support copy to clipboard!");
+			return;
+		}
+
+		navigator.clipboard.writeText(imageUrl);
+	};
+
 	return (
 		<section className={styles.card}>
 			<Image src={checkSvg} alt="Successful" />
@@ -37,7 +46,7 @@ export default function Result() {
 			/>
 			<div className={styles.img__link}>
 				<h2>{imageUrl}</h2>
-				<button className={styles.img__btn}>
+				<button className={styles.img__btn} onClick={handleCopy}>
 					<p>Copy</p>
 				</button>
 			</div>
