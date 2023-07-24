@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
+import { ImageProvider } from "@/store/ImageContext";
 
 const poppins = Poppins({ weight: "500", subsets: ["latin"] });
 
@@ -17,19 +18,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en">
-			<body className={poppins.className} suppressHydrationWarning={true}>
-				{children}
-				<footer className={montserrat.variable}>
-					created by{" "}
-					<a
-						href="https://www.linkedin.com/in/lazar-stojanovi%C4%87-9ba1a5238/"
-						target="_blank">
-						Lazar Stojanović
-					</a>{" "}
-					- design by devChallenges
-				</footer>
-			</body>
-		</html>
+		<ImageProvider>
+			<html lang="en">
+				<body className={poppins.className} suppressHydrationWarning={true}>
+					{children}
+					<footer className={montserrat.variable}>
+						created by{" "}
+						<a
+							href="https://www.linkedin.com/in/lazar-stojanovi%C4%87-9ba1a5238/"
+							target="_blank">
+							Lazar Stojanović
+						</a>{" "}
+						- design by devChallenges
+					</footer>
+				</body>
+			</html>
+		</ImageProvider>
 	);
 }
