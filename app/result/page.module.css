@@ -59,3 +59,15 @@
 	font-family: Poppins;
 	font-weight: 500;
 }
+
+@media screen and (max-width: 400px) {
+	.card {
+		max-width: 21rem;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 700px) {
+	.card {
+		max-width: 24rem;
+	}
+}

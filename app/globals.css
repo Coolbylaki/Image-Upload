@@ -71,3 +71,10 @@ h6 {
 #__next {
 	isolation: isolate;
 }
+
+@media screen and (max-width: 767px) {
+	footer {
+		font-size: 0.725rem;
+		bottom: 1rem;
+	}
+}

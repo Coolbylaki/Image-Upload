@@ -43,3 +43,41 @@
 		left: 21.5rem;
 	}
 }
+
+@media screen and (max-width: 400px) {
+	.card {
+		max-width: 21rem;
+	}
+
+	.bar {
+		max-width: 17.5rem;
+	}
+
+	@keyframes loadingAnimation {
+		0% {
+			left: -6rem;
+		}
+		100% {
+			left: 17.5rem;
+		}
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 700px) {
+	.card {
+		max-width: 24rem;
+	}
+
+	.bar {
+		max-width: 20.5rem;
+	}
+
+	@keyframes loadingAnimation {
+		0% {
+			left: -6rem;
+		}
+		100% {
+			left: 20.5rem;
+		}
+	}
+}
