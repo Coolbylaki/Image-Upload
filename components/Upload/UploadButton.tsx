@@ -40,7 +40,7 @@ export default function Upload(props: Props) {
 				fileExtension === "jpeg"
 			) {
 				const imgRef = ref(imageDb, `files/${v4()}`);
-				uploadBytes(imgRef, files?.[0]);
+				await uploadBytes(imgRef, files?.[0]);
 
 				setImageRef(imgRef);
 

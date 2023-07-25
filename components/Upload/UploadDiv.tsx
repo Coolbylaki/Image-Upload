@@ -41,10 +41,10 @@ export default function UploadDiv() {
 	};
 
 	useEffect(() => {
-		const handleFurtherUpload = (image: File) => {
+		const handleFurtherUpload = async (image: File) => {
 			if (image) {
 				const imgRef = ref(imageDb, `files/${v4()}`);
-				uploadBytes(imgRef, image);
+				await uploadBytes(imgRef, image);
 
 				setImageRef(imgRef);
 
