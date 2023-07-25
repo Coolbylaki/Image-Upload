@@ -1,4 +1,4 @@
-import Upload from "@/components/Upload/Upload";
+import UploadButton from "@/components/Upload/UploadButton";
 
 import styles from "./page.module.css";
 import Image from "next/image";
@@ -20,7 +20,7 @@ export default function Home() {
 			</div>
 			<p>Or</p>
 
-			<Upload btnClass={styles.btn} />
+			<UploadButton btnClass={styles.btn} />
 		</section>
 	);
 }
