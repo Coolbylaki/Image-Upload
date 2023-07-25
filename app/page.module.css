@@ -38,23 +38,3 @@
 	font-size: 0.75rem;
 	margin-top: 1.3rem;
 }
-
-.img-box {
-	max-width: 21.125rem;
-	width: 100%;
-	background-color: #f6f8fb;
-	border: 1px dashed #97bef4;
-	border-radius: 0.75rem;
-	padding: 2.5rem 4.3rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 1.2rem;
-}
-
-.img-box p {
-	font-weight: 500;
-	color: var(--gray-4);
-	font-size: 0.75rem;
-	margin-top: 2.33rem;
-}
